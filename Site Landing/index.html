@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Landing</title>
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+	<link href="http://allfont.ru/allfont.css?fonts=archivo-black" rel="stylesheet" type="text/css" />
+	<link href="http://allfont.ru/allfont.css?fonts=roboto-thin" rel="stylesheet" type="text/css" />
+	<link href="http://allfont.ru/allfont.css?fonts=roboto-medium" rel="stylesheet" type="text/css" />
+	<link href="http://allfont.ru/allfont.css?fonts=roboto-light" rel="stylesheet" type="text/css" />
+	<link href='https://fonts.googleapis.com/css?family=Major Mono Display' rel='stylesheet' type="text/css">
+
+
+</head>
+<body>
+	<header>
+		<div id="logo" onclick="slowScroll('#top')">
+			<span>Restoraunt.</span>
+		</div>
+		<div id="about">
+			<a href="#" onclick="slowScroll('#main')">Posibilities</a>
+			<a href="#" onclick="slowScroll('#overview')">Overview</a>
+			<a href="#" onclick="slowScroll('#contacts')">Contacts</a>
+			<a href="#" onclick="slowScroll('#faq')">FAQ</a>
+		</div>
+	</header>
+
+	<div id="top">
+		<h1>What you want</h1>
+		<h3>is what you get.</h3>
+	</div>
+
+	<div id="main">
+		<div class="intro">
+			<h2>Quality</h2>
+			<span>Only fresh food and quick delivery.</span>
+		</div>
+		<div class="text">
+			<span>
+				We offer best discount for regular customers. Delivery on time and without delay. Always fresh food and excludive packaging. 24/7 teck support and helpful staff.
+			</span>
+		</div>
+		<a href="info.html" class="btn">Read the Information</a>
+	</div>
+
+	<div id="overview">
+		<h2>Latest News</h2>
+
+		<div class="img">
+			<img src="https://content.fortune.com/wp-content/uploads/2015/09/starbucks_mop_national_rollout_2015_3-1.jpg">
+			<span>Mobile Order & Pay</span>
+		</div>
+		<div class="img">
+			<img src="https://nash.kharkiv.ua/wp-content/uploads/2020/02/uber-eats-v-harkove.jpg">
+			<span>Delivery With Uber Eats</span>
+		</div>
+		<div class="img">
+			<img src="https://fatgirlskinny.net/wp-content/uploads/2019/01/Screen-Shot-2019-01-04-at-21.57.05.png">
+			<span>Nutrition Calculator</span>
+		</div>
+		<div class="img">
+			<img src="https://ec.europa.eu/programmes/erasmus-plus/sites/erasmusplus2/files/styles/erasmus__rewamp_overview/public/covid19-cdc-unsplash.jpg?itok=ocK3HqgR">
+			<span>Our Response To Coronavirus</span>
+		</div>
+	</div>
+
+	<div id="faq">
+	    <div>
+	      	<span class="title">Payment</span><br>
+	      	<span class="heading">Whick type of payment you can get?</span>
+	      	<p>The payment will pass for your choos by credit card or by cash.</p>
+	    </div>
+	    <div>
+	      	<span class="title">Information</span><br>
+	      	<span class="heading">Which service you can get</span>
+	      	<p>We offer best discount for regular customers. Delivery on time and without delay. Always fresh food and excludive packaging. 24/7 teck support and helpful staff.</p>
+	    </div>
+	    <div>
+	      	<span class="title">Discounts</span><br>
+	      	<span class="heading">Which discounts we offer</span>
+	      	<p>We offer best discount for regular customers. Delivery on time and without delay. Always fresh food and excludive packaging. 24/7 teck support and helpful staff.</p>
+	    </div>
+  	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+		function slowScroll(id) {
+			$('html, body').animate({
+				scrollTop: $(id).offset().top
+			}, 500);
+		}
+
+		$(document).on("scroll", function() {
+			if($(window).scrollTop() === 0)
+				$("header").removeClass("fixed");
+			else
+				$("header").attr("class", "fixed")
+		})
+	</script>
+	<!-- <div class="flex-container">
+		<div class="buttons">
+			<p>RestorAunt.</p>
+			<a href="/">our menu</a>
+			<a href="/">deals</a>
+			<a href="/">locate</a>
+			<a href="/">about us</a>
+		</div>
+		<div class="main-info">
+			<p align="center">What you want is what you get.</p>
+			<a class="semi-transparent-button" href="#">quick oRder</a>
+		</div>
+		
+		
+		<div class="foot">
+			<p>© Copyright 2020 Anatoliy Sadovnichiy Inc.</p>
+			<p>Privacy  |  Terms of Use  |  Ad Choices & Cookies  |  Do Not Sell My Personal Information  |  Sitemap</p>
+		</div>
+	</div> -->
+</body>
+
+</html>

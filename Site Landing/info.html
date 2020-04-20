@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Landing</title>
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+	<link href="http://allfont.ru/allfont.css?fonts=archivo-black" rel="stylesheet" type="text/css" />
+	<link href="http://allfont.ru/allfont.css?fonts=roboto-thin" rel="stylesheet" type="text/css" />
+	<link href="http://allfont.ru/allfont.css?fonts=roboto-medium" rel="stylesheet" type="text/css" />
+	<link href="http://allfont.ru/allfont.css?fonts=roboto-light" rel="stylesheet" type="text/css" />
+	<link href='https://fonts.googleapis.com/css?family=Major Mono Display' rel='stylesheet' type="text/css">
+
+
+</head>
+<body>
+	<header>
+		<div id="logo" onclick="slowScroll('#topinfo')">
+			<span>Restoraunt.</span>
+		</div>
+		<div id="about">
+			<a href="index.html" onclick="slowScroll('#maininfo')">< Main Page</a>
+		</div>
+	</header>
+
+	<div id="topinfo">
+		<h1>Information Page</h1>
+		<h3>Some things about our restoraunt.</h3>
+	</div>
+	</div>
+
+	<div id="maininfo">
+		<div class="intro">
+			<h2>About Our Food</h2>
+			<img src="https://www.mcdonalds.com/is/image/content/dam/usa/nfl/assets/hero/About_Our_Food_Hero_1260x560_Desktop.jpg?$Hero_Desktop$">
+			<span>We’re Passionate About Our Food</span>
+		</div>
+		<div class="text">
+			<span>
+				From making healthier additions to our Foods, to serving up fresh beef Quarter Pounder burgers that are cooked when you order, we’re always finding ways to show our commitment to our customers and our food. 
+			</span>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+		function slowScroll(id) {
+			$('html, body').animate({
+				scrollTop: $(id).offset().top
+			}, 500);
+		}
+
+		$(document).on("scroll", function() {
+			if($(window).scrollTop() === 0)
+				$("header").removeClass("fixed");
+			else
+				$("header").attr("class", "fixed")
+		})
+	</script>
+
+</body>
+</html>
